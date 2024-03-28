@@ -9,31 +9,9 @@ import com.epam.healenium.SelfHealingDriver;
 
 public class AppTest 
 {
-  
-    @Test
-    public void shouldAnswerWithTrue()
-    {
-        System.out.println("Starting....");
-        
-        SelfHealingDriver driver = null;
-        
-        WebDriver delegate = new ChromeDriver();
-        driver = SelfHealingDriver.create(delegate);
-        driver.get("https://parabank.parasoft.com/parabank/index.htm");
-        System.out.println("qqq....1");
-        driver.findElement(By.xpath("//*[@id='loginPanel']/form/div[1]/input")).sendKeys("admin");
-        System.out.println("qqq...2.");
-        driver.findElement(By.xpath("//*[@id=\"loginPanel\"]/form/div[2]/input")).sendKeys("admin");
-        System.out.println("qqq...3.");
-        driver.findElement(By.xpath("//*[@id=\"loginPanel\"]/form/div[3]/input")).click();
-        System.out.println("qqq...4.");
-        
-        driver.quit();
-        System.out.println("Done");
-    }
  
     @Test
-    public void sample2()
+    public void selfHealingUsingHealenium()
     {
         System.out.println("Starting....");
         
